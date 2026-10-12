@@ -1,0 +1,548 @@
+
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Studiu de caz | Git și GitHub</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+            scroll-behavior: smooth;
+        }
+
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: #f4f6fb;
+            color: #263248;
+            line-height: 1.7;
+        }
+
+        header {
+            background: linear-gradient(135deg, #172554, #334e85);
+            color: white;
+            text-align: center;
+            padding: 65px 20px;
+        }
+
+        header .tag {
+            display: inline-block;
+            background: #ffffff20;
+            border: 1px solid #ffffff50;
+            padding: 6px 15px;
+            border-radius: 25px;
+            font-size: 14px;
+        }
+
+        header h1 {
+            font-size: 42px;
+            margin: 20px 0 10px;
+        }
+
+        header p {
+            max-width: 700px;
+            margin: 10px auto;
+        }
+
+        nav {
+            background: #ffffff;
+            padding: 15px;
+            text-align: center;
+            position: sticky;
+            top: 0;
+            z-index: 10;
+            box-shadow: 0 2px 10px #00000012;
+        }
+
+        nav a {
+            display: inline-block;
+            color: #263b68;
+            text-decoration: none;
+            font-weight: bold;
+            margin: 5px 12px;
+            font-size: 14px;
+        }
+
+        nav a:hover {
+            color: #2563eb;
+        }
+
+        main {
+            max-width: 1050px;
+            margin: 35px auto;
+            padding: 0 20px;
+        }
+
+        section {
+            background: white;
+            padding: 30px;
+            margin-bottom: 25px;
+            border-radius: 15px;
+            box-shadow: 0 4px 18px #1725540b;
+        }
+
+        h2 {
+            color: #243b70;
+            margin-top: 0;
+        }
+
+        h3 {
+            color: #3157a4;
+        }
+
+        .subtitle {
+            color: #667085;
+            margin-top: -10px;
+        }
+
+        .cards {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 18px;
+            margin-top: 20px;
+        }
+
+        .card {
+            padding: 22px;
+            background: #f0f4ff;
+            border-radius: 12px;
+            border-top: 4px solid #4169c1;
+        }
+
+        .number {
+            color: #4169c1;
+            font-size: 28px;
+            font-weight: bold;
+        }
+
+        .steps li {
+            padding: 5px 0;
+        }
+
+        .command {
+            background: #172033;
+            color: #e6efff;
+            padding: 18px;
+            border-radius: 10px;
+            overflow-x: auto;
+            margin: 15px 0;
+            font-family: Consolas, monospace;
+        }
+
+        .command p {
+            margin: 5px 0;
+            white-space: pre-wrap;
+            overflow-wrap: anywhere;
+        }
+
+        .note {
+            background: #edf4ff;
+            border-left: 4px solid #4169c1;
+            padding: 15px;
+            border-radius: 5px;
+        }
+
+        .button {
+            display: inline-block;
+            background: #ffffff;
+            color: #243b70;
+            padding: 12px 22px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: bold;
+            margin-top: 15px;
+        }
+
+        .button:hover {
+            background: #e9efff;
+        }
+
+        a {
+            overflow-wrap: anywhere;
+        }
+
+        footer {
+            background: #172554;
+            color: white;
+            text-align: center;
+            padding: 25px 15px;
+        }
+
+        footer p {
+            margin: 5px;
+        }
+
+        @media (max-width: 600px) {
+            header {
+                padding: 45px 18px;
+            }
+
+            header h1 {
+                font-size: 30px;
+            }
+
+            nav a {
+                margin: 4px 6px;
+            }
+
+            section {
+                padding: 21px;
+            }
+
+            main {
+                padding: 0 12px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+<header>
+    <span class="tag">STUDIU DE CAZ</span>
+    <h1>Git și GitHub</h1>
+    <p>Importanța utilizării aplicațiilor de lucru în echipă</p>
+    <p>Lucrul la un proiect comun</p>
+    <a class="button" href="#introducere">Descoperă proiectul</a>
+</header>
+
+<nav>
+    <a href="#introducere">Introducere</a>
+    <a href="#instrumente">Git și GitHub</a>
+    <a href="#comenzi">Comenzi Git</a>
+    <a href="#echipa">Echipa</a>
+    <a href="#projects">Projects</a>
+    <a href="#publicare">Publicare</a>
+    <a href="#concluzie">Concluzie</a>
+</nav>
+
+<main>
+
+    <section id="introducere">
+        <h2>1. Introducere</h2>
+        <p>
+            În prezent, multe proiecte informatice sunt realizate de echipe
+            formate din mai multe persoane. Pentru o bună organizare,
+            membrii echipei au nevoie de instrumente care să îi ajute să
+            comunice și să lucreze împreună.
+        </p>
+        <p>
+            Git și GitHub sunt instrumente importante pentru dezvoltarea
+            proiectelor. Ele permit păstrarea fișierelor, urmărirea
+            modificărilor și colaborarea dintre programatori.
+        </p>
+        <div class="note">
+            <strong>Scopul studiului:</strong> prezentarea modului în care
+            Git și GitHub contribuie la organizarea și realizarea unui
+            proiect comun.
+        </div>
+    </section>
+
+    <section id="instrumente">
+        <h2>2. Ce sunt Git și GitHub?</h2>
+        <p class="subtitle">
+            Două instrumente diferite, care se completează reciproc.
+        </p>
+
+        <div class="cards">
+            <div class="card">
+                <div class="number">01</div>
+                <h3>Git</h3>
+                <p>
+                    Git este un sistem de control al versiunilor. Acesta
+                    înregistrează modificările realizate în fișiere și
+                    permite consultarea istoricului proiectului.
+                </p>
+            </div>
+
+            <div class="card">
+                <div class="number">02</div>
+                <h3>GitHub</h3>
+                <p>
+                    GitHub este o platformă online unde proiectele pot fi
+                    păstrate, distribuite și dezvoltate în colaborare
+                    cu alți utilizatori.
+                </p>
+            </div>
+
+            <div class="card">
+                <div class="number">03</div>
+                <h3>Git Bash</h3>
+                <p>
+                    Git Bash permite executarea comenzilor Git pentru
+                    crearea proiectelor, salvarea modificărilor și
+                    încărcarea fișierelor pe GitHub.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <h2>3. Avantajele lucrului în echipă</h2>
+        <ul>
+            <li>Mai multe persoane pot contribui la același proiect.</li>
+            <li>Modificările fișierelor pot fi urmărite.</li>
+            <li>Codul sursă poate fi păstrat online.</li>
+            <li>Sarcinile pot fi împărțite între membrii echipei.</li>
+            <li>Greșelile pot fi identificate și corectate mai ușor.</li>
+            <li>Proiectul poate fi publicat pe internet.</li>
+            <li>Istoricul permite revenirea la o versiune anterioară.</li>
+        </ul>
+    </section>
+
+    <section id="comenzi">
+        <h2>4. Comenzi Git Bash</h2>
+        <p>
+            Pentru a lucra cu Git, utilizatorul execută comenzi în
+            terminal. Fiecare comandă are un rol concret.
+        </p>
+
+        <h3>Inițializarea proiectului</h3>
+        <div class="command">
+            <p>git init</p>
+        </div>
+        <p>Creează un depozit Git în folderul proiectului.</p>
+
+        <h3>Pregătirea fișierelor</h3>
+        <div class="command">
+            <p>git add index.html</p>
+        </div>
+        <p>Pregătește fișierul pentru salvarea modificărilor.</p>
+
+        <h3>Salvarea modificărilor</h3>
+        <div class="command">
+            <p>git commit -m "Adaug pagina HTML"</p>
+        </div>
+        <p>Înregistrează modificările în istoricul proiectului.</p>
+
+        <h3>Încărcarea pe GitHub</h3>
+        <div class="command">
+            <p>git push</p>
+        </div>
+        <p>Trimite pe GitHub modificările locale pregătite anterior.</p>
+
+        <div class="note">
+            Comanda <strong>git push</strong> funcționează după ce
+            repository-ul local a fost conectat la repository-ul online
+            și a fost configurată ramura de lucru.
+        </div>
+    </section>
+
+    <section id="echipa">
+        <h2>5. Colaborarea dintre utilizatori</h2>
+        <p>
+            GitHub permite adăugarea altor utilizatori într-un repository.
+            Aceștia pot contribui la proiect în funcție de permisiunile
+            primite.
+        </p>
+
+        <div class="cards">
+            <div class="card">
+                <h3>Administratorul</h3>
+                <p>
+                    Creează repository-ul, organizează proiectul și
+                    gestionează accesul colaboratorilor.
+                </p>
+            </div>
+
+            <div class="card">
+                <h3>Colaboratorul</h3>
+                <p>
+                    Poate modifica fișierele și trimite contribuții,
+                    în limitele permisiunilor acordate.
+                </p>
+            </div>
+
+            <div class="card">
+                <h3>Verificarea codului</h3>
+                <p>
+                    Modificările pot fi discutate și verificate înainte
+                    de integrarea lor în proiectul principal.
+                </p>
+            </div>
+        </div>
+
+        <h3>Cum adăugăm un colaborator?</h3>
+        <ol class="steps">
+            <li>Deschidem repository-ul pe GitHub.</li>
+            <li>Intrăm în Settings.</li>
+            <li>Selectăm Collaborators.</li>
+            <li>Apăsăm Add people.</li>
+            <li>Căutăm utilizatorul și trimitem invitația.</li>
+            <li>Utilizatorul acceptă invitația.</li>
+        </ol>
+    </section>
+
+    <section id="projects">
+        <h2>6. GitHub Projects – planificarea sarcinilor</h2>
+        <p>
+            GitHub Projects este un instrument pentru planificarea și
+            urmărirea activităților unui proiect. Acesta poate afișa
+            sarcinile într-un tabel, într-o tablă de tip Kanban sau
+            într-un calendar de tip roadmap.
+        </p>
+
+        <div class="cards">
+            <div class="card">
+                <h3>Planificare</h3>
+                <p>
+                    Echipa stabilește sarcinile care trebuie realizate
+                    și ordinea acestora.
+                </p>
+            </div>
+
+            <div class="card">
+                <h3>Organizare</h3>
+                <p>
+                    Sarcinile pot fi grupate și repartizate membrilor
+                    echipei.
+                </p>
+            </div>
+
+            <div class="card">
+                <h3>Urmărire</h3>
+                <p>
+                    Membrii pot verifica ce sarcini sunt noi, în lucru
+                    sau finalizate.
+                </p>
+            </div>
+        </div>
+
+        <h3>Exemplu de organizare</h3>
+        <div class="cards">
+            <div class="card">
+                <h3>De făcut</h3>
+                <p>Crearea structurii paginii HTML.</p>
+            </div>
+
+            <div class="card">
+                <h3>În lucru</h3>
+                <p>Realizarea designului cu CSS.</p>
+            </div>
+
+            <div class="card">
+                <h3>Finalizat</h3>
+                <p>Verificarea și publicarea paginii.</p>
+            </div>
+        </div>
+
+        <p>
+            Prin utilizarea GitHub Projects, membrii echipei își pot
+            organiza mai bine activitățile și pot urmări progresul.
+        </p>
+
+        <p>
+            Documentație:
+            <a href="https://docs.github.com/en/issues/planning-and-tracking-with-projects/learning-about-projects/about-projects" target="_blank" rel="noopener noreferrer">
+                Despre GitHub Projects
+            </a>
+        </p>
+    </section>
+
+    <section id="publicare">
+        <h2>7. Publicarea paginii web</h2>
+        <p>
+            GitHub Pages este un serviciu care permite publicarea
+            site-urilor web statice. Pentru acest studiu de caz,
+            fișierul index.html este încărcat într-un repository public.
+        </p>
+
+        <ol class="steps">
+            <li>Creăm repository-ul pe GitHub.</li>
+            <li>Încărcăm fișierul index.html.</li>
+            <li>Deschidem Settings și apoi Pages.</li>
+            <li>Selectăm ramura main și folderul /(root).</li>
+            <li>Apăsăm Save și așteptăm publicarea.</li>
+            <li>Accesăm linkul generat de GitHub Pages.</li>
+        </ol>
+
+        <div class="note">
+            Linkul paginii publicate trebuie copiat din secțiunea Pages
+            după finalizarea procesului de publicare.
+        </div>
+
+        <p>
+            Documentație:
+            <a href="https://docs.github.com/en/pages" target="_blank" rel="noopener noreferrer">
+                GitHub Pages
+            </a>
+        </p>
+    </section>
+
+    <section>
+        <h2>8. Studiu de caz practic</h2>
+        <p>
+            O echipă de trei elevi trebuie să creeze un site web.
+            Primul elev realizează structura HTML, al doilea se ocupă
+            de aspectul paginii folosind CSS, iar al treilea verifică
+            informațiile și funcționarea site-ului.
+        </p>
+        <p>
+            Echipa folosește Git pentru a înregistra modificările și
+            GitHub pentru a păstra proiectul online. Colaboratorii
+            contribuie la fișiere, iar GitHub Projects îi ajută să
+            organizeze sarcinile.
+        </p>
+        <p>
+            La final, pagina este publicată cu GitHub Pages și poate
+            fi accesată printr-un link.
+        </p>
+    </section>
+
+    <section id="concluzie">
+        <h2>9. Concluzie</h2>
+        <p>
+            Git și GitHub sunt instrumente importante pentru dezvoltarea
+            proiectelor comune. Git ajută la urmărirea modificărilor,
+            GitHub permite colaborarea online, iar GitHub Projects
+            ajută la organizarea activităților.
+        </p>
+        <p>
+            Folosirea acestor instrumente economisește timp, îmbunătățește
+            organizarea și facilitează realizarea proiectelor în echipă.
+        </p>
+    </section>
+
+    <section>
+        <h2>10. Resurse utilizate</h2>
+        <ul>
+            <li>
+                <a href="https://docs.github.com/en/get-started" target="_blank" rel="noopener noreferrer">
+                    GitHub Docs – Noțiuni introductive
+                </a>
+            </li>
+            <li>
+                <a href="https://www.w3schools.com/git/" target="_blank" rel="noopener noreferrer">
+                    W3Schools – Git Tutorial
+                </a>
+            </li>
+            <li>
+                <a href="https://docs.github.com/en/issues/planning-and-tracking-with-projects/learning-about-projects/about-projects" target="_blank" rel="noopener noreferrer">
+                    GitHub Projects – Planificarea activităților
+                </a>
+            </li>
+            <li>
+                <a href="https://docs.github.com/en/copilot/using-github-copilot/asking-github-copilot-questions-in-github" target="_blank" rel="noopener noreferrer">
+                    GitHub Copilot – Întrebări și asistență
+                </a>
+            </li>
+            <li>
+                <a href="https://docs.github.com/en/pages" target="_blank" rel="noopener noreferrer">
+                    GitHub Pages – Publicarea site-urilor
+                </a>
+            </li>
+        </ul>
+    </section>
+
+</main>
+
+<footer>
+    <p><strong>Studiu de caz: Git și GitHub</strong></p>
+    <p>Importanța aplicațiilor de lucru în echipă</p>
+    <p>Proiect educațional</p>
+</footer>
+
+</body>
+</html>
